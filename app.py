@@ -16,5 +16,9 @@ def models():
 def team():
     return render_template('teams.html')
 
+@app.route('/net')
+def net():
+    return render_template('coviddeepnet.html')
+
 if __name__=="__main__":
     app.run(debug=True)
