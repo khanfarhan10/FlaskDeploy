@@ -4,21 +4,34 @@ import os
 app = Flask(__name__, static_folder="assets")
 ROOT_DIR = os.getcwd()
 
+
 @app.route('/')
 def home():
     return render_template('nav.html')
+
 
 @app.route('/models')
 def models():
     return render_template('models.html')
 
+
 @app.route('/team')
 def team():
     return render_template('teams.html')
+
 
 @app.route('/net')
 def net():
     return render_template('coviddeepnet.html')
 
-if __name__=="__main__":
+@app.route('/shreya')
+def shreya():
+    return render_template('shreya.html')
+
+@app.route('/custommodels')
+def custom_models():
+    return render_template('custom_model.html')
+
+
+if __name__ == "__main__":
     app.run(debug=True)
