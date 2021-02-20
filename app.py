@@ -10,6 +10,11 @@ def home():
     return render_template('nav.html')
 
 
+@app.route('/base')
+def base():
+    return render_template('base.html')
+
+
 @app.route('/models')
 def models():
     return render_template('models.html')
@@ -24,9 +29,11 @@ def team():
 def net():
     return render_template('coviddeepnet.html')
 
+
 @app.route('/shreya')
 def shreya():
     return render_template('shreya.html')
+
 
 @app.route('/custommodels')
 def custom_models():
