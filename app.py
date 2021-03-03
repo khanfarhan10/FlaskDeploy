@@ -39,6 +39,10 @@ def shreya():
 def custom_models():
     return render_template('custom_model.html')
 
+@app.route('/damik')
+def damik():
+    return render_template('damik.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
